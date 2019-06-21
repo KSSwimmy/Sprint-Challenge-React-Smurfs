@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class SmurfForm extends Component {
   constructor(props) {
@@ -62,6 +63,9 @@ class SmurfForm extends Component {
             name="height"
           />
           <button type="submit">Add to the village</button>
+          <div>
+          <Link to='/'>Back to the Smurfs</Link>
+          </div>
         </form>
       </div>
     );
