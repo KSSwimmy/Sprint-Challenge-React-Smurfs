@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import axios from 'axios';
+
 import { Link } from 'react-router-dom';
 
 class SmurfForm extends Component {
@@ -13,25 +13,18 @@ class SmurfForm extends Component {
     };
   }
 
-  addSmurf = (event, smurf) => {
-    event.preventDefault();
-    // add code to create the smurf using the api
-    axios
-      .post('http://localhost:3333/smurfs', smurf) //adds
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
-  };
+  
 
   handlerSubmit = event => {
-    event.preventDefault();
-    this.addSmurf(event, this.state);
+    this.props.addSmurf(event, this.state)
+   
     this.setState({
       name: '',
       age: '',
       height: ''
     });
 
-    // this.state.history.push('/')
+    this.props.history.push('/')
 
   }
 
