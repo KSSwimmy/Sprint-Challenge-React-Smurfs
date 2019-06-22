@@ -38,11 +38,10 @@ class App extends Component {
     console.log('state', this.state.smurfs)
     return (
       <div className="App">
-       <div>
-          <Link to='/'>Smurfs</Link>
+      
+        
          
-          <Link to='smurf-form'>Add Smurf</Link>
-          </div>
+  
 
         <Route exact path='/smurf-form'render={props => <SmurfForm {...props} addSmurf={this.addSmurf} />}
         /> 

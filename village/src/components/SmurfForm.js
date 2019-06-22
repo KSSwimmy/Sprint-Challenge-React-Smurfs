@@ -56,7 +56,7 @@ class SmurfForm extends Component {
             name="height"
           />
           <button type="submit">Add to the village</button>
-          <div>
+          <div className='backLink'>
           <Link to='/'>Back to the Smurfs</Link>
           </div>
         </form>
